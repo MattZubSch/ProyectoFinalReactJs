@@ -1,0 +1,10 @@
+.contPrinc{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.navbar{
+    padding: 3%;
+    background-color: rgb(233, 143, 150);
+}
