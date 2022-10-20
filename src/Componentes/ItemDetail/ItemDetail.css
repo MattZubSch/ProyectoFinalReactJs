@@ -1,0 +1,29 @@
+.ItemDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ItemDetail-Title{
+    font-size: 3rem;
+}
+
+.itemDetailContIzq{
+    padding: 2rem;
+    width: 50%;
+}
+
+.itemDetailContDer{
+    padding: 2rem;
+    width: 50%;
+    flex-direction: column;
+    align-self: center;
+}
+
+.descrip{
+    font-size: 2rem;
+}
+
+.precio{
+    font-size: 1.5rem;
+}

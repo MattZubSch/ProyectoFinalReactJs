@@ -4,8 +4,15 @@ import "./CardWidget.css"
 const CardWidget = () => {
     return (
         <div>
-            <img className="cart" src={cart} alt="Cart"/>
+            
+            <div className="widget">
+                <img className="cart" src={cart} alt="Cart"/>
+            </div>
+            <div>
+                <sup>0</sup>
+            </div>
         </div>
+        
     )   
 }
 

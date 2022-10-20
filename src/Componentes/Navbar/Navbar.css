@@ -1,10 +1,38 @@
+@font-face {
+    font-family: 'YaroSt-Black';
+    src: local('YaroSt-Black'), url("../../fonts/YaroSt-Black.woff") format('opentype');
+  }
+
+@font-face {
+    font-family: 'VisbyCF-Heavy';
+    src: local('VisbyCF-Heavy'), url('../../fonts/VisbyCF-Heavy.woff') format('opentype')
+}
+
 .contPrinc{
     display: flex;
     justify-content: center;
     align-self: center;
+    font-family: VisbyCF-Heavy;
 }
 
-.navbar{
+.barraNav{
     padding: 3%;
-    background-color: rgb(233, 143, 150);
+    background: rgb(224,86,158);
+    background: linear-gradient(180deg, rgba(224,86,158,1) 25%, rgba(186,143,218,1) 50%, rgba(79,163,198,1) 75%);
+    
+}
+
+.title{
+    font-size: 3rem;
+    font-family: VisbyCF-Heavy;
+    color: whitesmoke;
+    
+}
+
+.title:hover{
+    color: white;
+}
+
+.cart{
+    margin: 20px;
 }
