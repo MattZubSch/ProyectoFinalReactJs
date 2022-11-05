@@ -1,3 +1,18 @@
 .btnCounter{
     margin: 3%;
+    display:inline-flex;
+    flex-direction: row;
+    /* width: 2.5rem; */
+
+}
+
+.counter{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnConfirm{
+    margin: 3%;
+    display:inline-flex;
+    flex-direction: row;
 }
