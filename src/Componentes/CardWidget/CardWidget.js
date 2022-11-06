@@ -1,4 +1,4 @@
-import cart from "./assets/cart.png"
+import cart from "./assets/cart.svg"
 import "./CardWidget.css"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
@@ -9,16 +9,18 @@ const CardWidget = () => {
     const { totalQuantity } = useContext(CartContext)
     
     return (
-        <Link to={'/cart'}>
-            <div className="widget">
-                <img className="cart" src={cart} alt="Cart"/>
-            </div>
+        <div className="widget">
             <div>
-                <sup>
+                <p className="cart-count">
                     {totalQuantity}
-                </sup>
+                </p>
             </div>
-        </Link>
+            <Link to={'/cart'}>
+                <div>
+                    <img className="cart" src={cart} alt="Cart"/>
+                </div>
+            </Link>
+        </div>
         
     )   
 }

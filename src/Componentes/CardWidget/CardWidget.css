@@ -1,0 +1,18 @@
+.cart-count{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    margin: 0px;
+    font-size: 1.5rem;
+}
+
+.cart{
+    margin: 0px;
+    height: 48px;
+}
+
+.widget{
+    margin-left: 2%;
+    margin-right: 2%;
+
+}

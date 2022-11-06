@@ -1,5 +1,4 @@
 import Item from "../Item/Item"
-import "./ItemList.css"
 
 const ItemList = ({products}) => {
    //listar
@@ -7,8 +6,10 @@ const ItemList = ({products}) => {
    //map transforma los productos en componentes
 
    return (
-    <div className="contPrincipal">
-        {products.map(prod => <Item key={prod.id} {...prod}/>)}
+    <div class="container text-center">
+        <div class="row row-cols-3">
+            {products.map(prod => <Item key={prod.id} {...prod}/>)}
+        </div>
     </div>
    )
 }

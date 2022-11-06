@@ -1,0 +1,19 @@
+.row-cart{
+    background-color:lavender;
+    border: 2px solid black;
+    box-shadow: 2px black;
+    border-radius: 10px;
+    margin: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.row-total{
+    border: 2px solid black;
+    box-shadow: 2px black;
+    border-radius: 10px;
+    margin: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%; 
+    background-color: greenyellow;
+}
