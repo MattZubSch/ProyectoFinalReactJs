@@ -1,9 +1,20 @@
-const Cart = () => {
+import React from "react"
+import { CartContext } from "../../context/CartContext"
+import { useContext } from "react"
 
+
+
+const Cart = () => {
+    const { cart } = useContext (CartContext)
 
     return (
         <div>
-            <h2>Carrito</h2>
+            <h1>Carrito</h1>
+            {
+                cart.map(prod => (
+                    <div>{prod.name}</div>
+                ))
+            }
         </div>
     )
 }

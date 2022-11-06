@@ -1,5 +1,7 @@
 import "./Item.css"
 import { Link } from "react-router-dom"
+// import { useContext } from "react"
+// import { MyContext } from '../../App'
 
 const Item = ({id, img, name, price}) => {
     return (
@@ -10,6 +12,7 @@ const Item = ({id, img, name, price}) => {
             <Link to={`/detail/${id}`} className="btnDetalle">Ver Detalle</Link>
         </div>
     )
+
 
 }
 

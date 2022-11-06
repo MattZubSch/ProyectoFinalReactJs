@@ -1,6 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css"
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from '../../context/CartContext.js'
 
  
 // const InputCount = ({onConfirm, stock, initial = 1}) => {
@@ -12,7 +13,7 @@ import { useState } from "react";
 //     }
 //   } 
 
-//   return (
+//   return ( 
 //     <div>
 //       <input type='number' onChange={handleChange} value={count} />
 //       <button onClick={() => onConfirm(count)}>Agregar al Carrito</button>
@@ -46,38 +47,31 @@ import { useState } from "react";
 
 
 
-const ItemDetail = ({ name, price, img, stock, description}) => {
+const ItemDetail = ({ id, name, price, img, stock, description}) => {
 
-  const CartConfirm = () => {
-    
-    return (
-      <div>
-        <h4>Producto agregado al carrito</h4>;
-        <button>Seguir Comprando</button>;
-        <button>Ir al Carrito</button>
-      </div>
-    );
+  const {addItem} = useContext(CartContext)
+
+  const handleOnAdd = (quantity) => {
+    const productToAdd = {
+      id, name, price, quantity
+    }
+
+    addItem(productToAdd)
   }
 
-  const [cartChange, setCartChange] = useState('confirm')  
-  const ItemConfirm = cartChange === 'confirm' ? ItemCount : CartConfirm
-
-  const handleOnClick = () => {
-    console.log('Productos Agregados al Carrito')
-    setCartChange(cartChange === 'confirm' ? 'button' : 'confirm')
-  };
 
     return (
         <div className="ItemDetail">
             <div className="itemDetailContIzq">
                 <h2 className="ItemDetail-Title">{name}</h2>
                 <img src={img} alt={name} height={500} width={500} />
+                <h5>{id}</h5>
             </div>
             <div className="itemDetailContDer">
                 <p className="descrip">{description}</p>
                 <p className="precio">Precio: ${price}</p> 
           <footer className="counterCart">
-              <ItemConfirm stock={stock} onClick={handleOnClick}/>
+              <ItemCount stock={stock} onAdd={handleOnAdd}/>
           </footer>
           </div>
         </div>
