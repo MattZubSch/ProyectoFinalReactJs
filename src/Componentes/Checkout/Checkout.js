@@ -17,6 +17,13 @@ const Checkout = () => {
     const [ name, setName] = useState('')
     const [ email, setEmail] = useState('')
     const [ number, setNumber] = useState('')
+    const [ emailConfirm, setEmailConfirm] = useState('')
+
+
+    const eValidate = (e) => {
+        e.preventDefault()
+       }
+
 
     const createOrder = async () => {
         setLoading(true)
@@ -131,11 +138,18 @@ const Checkout = () => {
                 <label className="form-label label">Email</label>
                 <input type="email" className="form-control inputLabel" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
+            <div className="row g-3 mt-5">
+                <div className="col">
+                <label className="form-label label">Confirmar Email</label>
+                <input type="email" className="form-control inputLabel" placeholder="Email" value={emailConfirm} onChange={(e) => setEmailConfirm(e.target.value)} />
+            </div>
             </div>
             </div>
             <div>
-                <button className="btn btn-primary m-5" onClick={createOrder}>Generar Orden</button>
+            { email === emailConfirm ? <button className="btn btn-primary m-5" type="button"  onClick={createOrder}>Generar Orden</button> : <button className="btn btn-secondary" type="button"  onClick={eValidate}>Email No Confirmado</button>}
+                {/* <button className="btn btn-primary m-5" onClick={createOrder}>Generar Orden</button> */}
             </div>
+        </div>
         </div>
     )
 
