@@ -1,7 +1,5 @@
 import "./Item.css"
 import { Link } from "react-router-dom"
-// import { useContext } from "react"
-// import { MyContext } from '../../App'
 
 const Item = ({id, img, name, price}) => {
     return (

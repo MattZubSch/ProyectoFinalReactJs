@@ -25,7 +25,7 @@ function App() {
             <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
             <Route path='/cart' element={<Cart />}/>
             <Route path='/checkout' element={<Checkout />} />
-            <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+            <Route path="*" element={<h1>La pagina que intentas buscar no existe</h1>} />
           </Routes>  
         </BrowserRouter>  
       </CartProvider>

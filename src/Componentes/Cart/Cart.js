@@ -6,7 +6,7 @@ import "./cart.css"
 
 
 const Cart = () => {
-    const { cart, total, removeItem } = useContext (CartContext)
+    const { cart, total, removeItem, totalQuantity } = useContext (CartContext)
     
     const handleRemove = (id) => {
         removeItem(id)
@@ -56,8 +56,14 @@ const Cart = () => {
             }
              <div className="container-fluid text-center">
                 <div className="row align-items-center row-total">
-                    <div className="col-md-8">
+                    <div className="col-md-6">
                         <h3>Total</h3>
+                    </div>
+                    <div className="col-md-2">
+                        <div>
+                        <h5>Cantidad de Productos</h5>
+                        <h2>{totalQuantity}</h2>
+                        </div>
                     </div>
                     <div className="col-md-4">
                         <h2>${total}</h2>
